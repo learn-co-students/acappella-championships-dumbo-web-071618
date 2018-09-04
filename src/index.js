@@ -45,14 +45,15 @@ document.addEventListener('DOMContentLoaded', init)
  }
 
 function makeWinner(winningGroup){
+
   let winningColumn = document.querySelector(`[data-row-id='${winningGroup.dataset.buttonId}']`)
 
   let winnerBanner = document.querySelector('#winner')
-
+debugger
   winnerBanner.innerHTML = 'Winner: '
 
   winningInfo = winningColumn.querySelectorAll('td')
-  console.log(winningInfo[1].innerText)
+
   let newText = document.createTextNode(winningInfo[1].innerText);
   winnerBanner.append(newText)
 
